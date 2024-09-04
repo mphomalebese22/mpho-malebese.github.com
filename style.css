@@ -20,7 +20,7 @@ h1 {
 h3 {
   margin-top: 20px;
   text-align: center;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-size: xx-large;
 }
 
@@ -43,7 +43,7 @@ body {
 .Details {
   flex: 1;
   min-width: 300px;
-  max-width: 100%;
+  max-width: 50%;
   margin-left: 150px;
   margin-bottom: 10px;
 }
@@ -63,7 +63,7 @@ body {
 .About {
   flex: 1;
   min-width: 300px;
-  max-width: 100%;
+  max-width: 50%;
   margin-left: -200px;
   padding: -10px;
 }
@@ -156,4 +156,39 @@ body {
 
 .content-container h2 {
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .Details {
+    margin-left: 0;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .About {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .card {
+    max-width: 90%;
+    margin: 20px 0;
+  }
+
+  .card img.avatar {
+    height: 200px;
+    width: 200px;
+    top: -100px;
+  }
+
+  .content-container {
+    margin-top: 100px;
+  }
 }
