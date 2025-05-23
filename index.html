@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>PROFILE</h1>
-    <h3>FULL STACK DEVELOPER GRADUATE</h3>
+    <h3>FULL STACK SOFTWARE ENGINEER</h3>
     <div class="main-container">
         <div class="Details">
             <h2>Personal Details</h2>
@@ -18,14 +18,18 @@
             <h4>Contact Numbers: </h4>
             <p>+27 65 212 2755 / +27 68 446 7125</p>
             <h4>Email Address: </h4>
-            <p>mphomalebese22@gmail.com</p>
+            <p><a href="mailto:mphomalebese22@gmail.com">mphomalebese22@gmail.com</a></p>
+            <h4>Linkedin: </h4>
+            <p><p><a href="https://www.linkedin.com/in/mpho-malebese-601aa8218/" target="_blank">Linkedin Link</a></p>
+            <h4>Github: </h4>
+            <p><a href="https://github.com/mphomalebese22?tab=repositories" target="_blank">Github Link</a></p>
             <h4>Location: </h4>
             <p>Willing to Relocate</p>
             
             <br>
             <div class="chatbot-container">
                 <button class="chat-toggle">
-                    <img src="images/images_666.png" alt="Message Icon" class="width:50px">
+                    <img src="images/images_666.png" alt="Message Icon">
                 </button>
             
                 <div class="chatbot-card">
@@ -33,138 +37,130 @@
                         <h3>Chat with Me</h3>
                         <i class="fas fa-times close-chat"></i>
                     </div>
-            
                     <div class="chat-messages">
                         <div class="message bot-message">
-                            Hi, I'm Mpho! Thanks for reaching out. I would like to get to know you. Please provide your Full Name, Contact Details, and the company you're from.
+                            Hi, I'm Mpho! Thanks for reaching out. Please provide your Name.
                         </div>
                     </div>
-            
                     <div class="chat-input-container">
                         <input type="text" id="chat-input" placeholder="Type a message..." />
                         <button id="send-button">Send</button>
                     </div>
                 </div>
             </div>
-            
         </div>
         
         <div class="About">
             <h2>About Me</h2>
+            <p>I am Mpho Malebese, a 23-year-old Full Stack Software Engineer. </p><br>
+            <p>I hold a Diploma in Information Technology from the Central University of Technology (2019–2021) and a National Certificate in Software Engineering from WeThinkCode_ (2022–2023).</p><br>
             
-            <p>I am a <strong>Full Stack Developer Graduate</strong> with expertise in <strong>Web/App Development, Database Management, and Cloud Computing</strong>.
-                Microsoft Azure Fundamentals and Salesforce Administrator Certified.I have a strong background in both <strong>Front-end and Back-end development</strong>, with proficiency in the following technologies:</p>
-             <br>
-             <ul class="skills-list">
-                 <li>HTML</li>
-                 <li>CSS</li>
-                 <li>JavaScript (React)</li>
-                 <li>Python</li>
-                 <li>C#</li>
-                 <li>Java</li>
-                 <li>Dart/Flutter</li>
-                 <li>SQL</li>
-                 <li>SQLite</li>
-             </ul>
-             <br>
-             <p>Additionally, I am experienced in version control using <strong>Git</strong> and have a solid understanding of <strong>Agile methodologies</strong>.</p><br>
-             
-             <p>I am passionate about problem-solving and optimizing system performance. I enjoy building scalable, user-centric applications and have experience integrating APIs and managing databases. I am known for being a reliable team player, I thrive in dynamic environments and am adaptable to evolving technologies and frameworks.</p>
-             <br>
-             <p>I am committed to delivering high-quality solutions and am eager to continue growing in the tech field.</p>
+            <p>In 2024, I completed a one-year Salesforce internship at Capaciti under the YES4Youth programme. I also earned <strong>Licences</strong> in <strong>Salesforce Administration</strong>  and <strong>Microsoft Azure</strong> </p><br>
+            
+            <p>I have strong skills in both front-end and back-end development. My tech stack includes:</p><br>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript (React)</li>
+                <li>Python</li>
+                <li>C#</li>
+                <li>Java</li>
+                <li>Dart/Flutter</li>
+                <li>SQL</li>
+                <li>SQLite</li>
+            </ul><br>
+
+            <p>I also have experience using <strong>Git</strong> for <strong>version control</strong> and working in Agile environments. I enjoy solving problems, building scalable applications, and contributing to innovative, user-focused projects.</p>
+
+            <h3>Projects</h3>
+            
+
+            <p><strong>To find out more about my project, go to the chatbot on the left side of the web page.</strong></p><br>
+            <p>I am passionate about tech, eager to learn, and always looking for opportunities to grow and collaborate in the industry.</p>
         </div>
+
         
         <div class="card">
             <img class="avatar" src="images/whiteback_pic.png" alt="Avatar">
             <div class="content-container">
                 <h2>Hello, I'm Mpho Malebese</h2>
-                <p>I am a graduate that can approach technical projects from concept to implementation.</p>
-                <a href="cv/MALEBESE_MPHO_CYNTHIA.pdf" class="CV-button">Download CV</a>
-
+                <p>I am a <strong>Software Engineer</strong> that can approach technical projects from concept to implementation.</p>
+                <a href="cv/Malebese_MC_CV (17).pdf" class="CV-button">Download CV</a>
             </div>
         </div>
     </div>
     <script>
         const chatToggle = document.querySelector(".chat-toggle");
-    const chatCard = document.querySelector(".chatbot-card");
-    const sendButton = document.getElementById("send-button");
-    const chatInput = document.getElementById("chat-input");
-    const chatMessages = document.querySelector(".chat-messages");
+        const chatCard = document.querySelector(".chatbot-card");
+        const sendButton = document.getElementById("send-button");
+        const chatInput = document.getElementById("chat-input");
+        const chatMessages = document.querySelector(".chat-messages");
 
-    let state = 'askDetails'; // Start by asking for details
-    let userName = ""; // Store user name
+        let state = 'askDetails';
+        let userName = "";
 
-    chatToggle.addEventListener("click", function () {
-        if (chatCard.style.height === "400px") {
-            chatCard.style.height = "0";
-            chatCard.style.opacity = "0";
-            chatToggle.classList.remove("open");
-        } else {
-            chatCard.style.height = "400px";
-            chatCard.style.opacity = "1";
-            chatToggle.classList.add("open");
-        }
-    });
+        chatToggle.addEventListener("click", function () {
+            if (chatCard.style.height === "400px") {
+                chatCard.style.height = "0";
+                chatCard.style.opacity = "0";
+                chatToggle.classList.remove("open");
+            } else {
+                chatCard.style.height = "400px";
+                chatCard.style.opacity = "1";
+                chatToggle.classList.add("open");
+            }
+        });
 
-    sendButton.addEventListener("click", sendMessage);
-    chatInput.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-            sendMessage();
-        }
-    });
+        sendButton.addEventListener("click", sendMessage);
+        chatInput.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") sendMessage();
+        });
 
-    function sendMessage() {
-        let messageText = chatInput.value.trim().toLowerCase();
-        
-        if (messageText !== "") {
-            let userMessage = document.createElement("div");
-            userMessage.classList.add("message");
-            userMessage.textContent = chatInput.value;
-            chatMessages.appendChild(userMessage);
+        function sendMessage() {
+            let messageText = chatInput.value.trim().toLowerCase();
+            if (messageText !== "") {
+                let userMessage = document.createElement("div");
+                userMessage.classList.add("message");
+                userMessage.textContent = chatInput.value;
+                chatMessages.appendChild(userMessage);
 
-            chatInput.value = "";
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-
-            setTimeout(() => {
-                let botMessage = document.createElement("div");
-                botMessage.classList.add("message", "bot-message");
-
-                if (messageText.includes("thank you")) {
-                    botMessage.textContent = "Thank you for contacting Mpho. I am happy to chat with you in the future.";
-                    state = "done"; // End the conversation
-                } 
-                else if (state === 'askDetails') {
-                    userName = chatInput.value.split(" ")[0]; // Extract first word as name
-                    botMessage.textContent = `Thank you! Would you like to learn more about my skills, hire me, collaborate on a project, or check out my work?`;
-                    state = 'awaitingResponse';
-                } 
-                else if (state === 'awaitingResponse') {
-                    if (messageText.includes("skills") || messageText.includes("collaborate")) {
-                        botMessage.textContent = "Please contact me on +27 65 212 2755 / +27 68 446 7125 or email me at mphomalebese22@gmail.com.";
-                    } 
-                    else if (messageText.includes("hire")) {
-                        botMessage.textContent = "Thank you so much for considering me! Please download my CV on the right side of this web page and contact me.";
-                    } 
-                    else if (messageText.includes("work") || messageText.includes("projects")) {
-                        botMessage.innerHTML = `
-                            Here are my completed projects: <br>
-                            1. <strong>Frontend Chat Mobile App</strong> - Created using Flutter. <a href="https://drive.google.com/file/d/1ZrjopsiqFZizcXirIgVd0VU1Pnty3PjK/view?usp=drivesdk" target="_blank">Check it out here</a>. <br>
-
-                            2. <strong>Full Stack Job Listing Web App</strong> - Built with React (Frontend), SQLite (Database), and Python (Flask) (Backend). <a href="https://www.linkedin.com/posts/mpho-malebese-601aa8218_girlcode-nedbank-python-activity-7234499692628180992-QPLl?utm_source=share&utm_medium=member_desktop" target="_blank">Check it out here</a>.
-                        `;
-                    } 
-                    else {
-                        botMessage.textContent = "Sorry, I didn't understand. Please choose from: skills, hire, collaborate, or work.";
-                    }
-                }
-
-                chatMessages.appendChild(botMessage);
+                chatInput.value = "";
                 chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 1000);
+
+                setTimeout(() => {
+                    let botMessage = document.createElement("div");
+                    botMessage.classList.add("message", "bot-message");
+
+                    if (messageText.includes("thank you")) {
+                        botMessage.textContent = "Thank you for contacting Mpho. I am happy to chat with you in the future.";
+                        state = "done";
+                    } else if (state === 'askDetails') {
+                        userName = chatInput.value.split(" ")[0];
+                        botMessage.textContent = `Thank you! Would you like to learn more about my skills, hire me, collaborate on a project, or check out my work?`;
+                        state = 'awaitingResponse';
+                    } else if (state === 'awaitingResponse') {
+                        if (messageText.includes("skills") || messageText.includes("collaborate")) {
+                            botMessage.innerHTML = `Please contact me on 065 212 2755 or email me at <a href="mailto:mphomalebese22@gmail.com">mphomalebese22@gmail.com</a>.`;
+
+                        } else if (messageText.includes("hire")) {
+                            botMessage.textContent = "Thank you so much for considering me! Please download my CV on the right side of this web page and contact me.";
+                        } else if (messageText.includes("work") || messageText.includes("projects")) {
+                            botMessage.innerHTML = `
+                                You can get my projects on github,
+                                <a href="https://github.com/mphomalebese22?tab=repositories" target="_blank">Check it out here</a>. <br>
+                                
+                            `;
+                        } else {
+                            botMessage.textContent = "Sorry, I didn't understand. Please choose from: skills, hire, collaborate, or work.";
+                        }
+                    }
+
+                    chatMessages.appendChild(botMessage);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000);
+            }
         }
-    }
     </script>
-    
 </body>
-<footer><p>01  January 2025</p></footer>
+<footer><p>01 January 2025</p></footer>
 </html>
